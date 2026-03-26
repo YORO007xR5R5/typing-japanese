@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ฝึกพิมพ์ภาษาญี่ปุ่น</title>
+<style>
+    body {
+        font-family: sans-serif;
+        background: #f0f0f0;
+        text-align: center;
+        padding: 20px;
+    }
+    h1 {
+        margin-bottom: 10px;
+    }
+    #textDisplay {
+        font-size: 28px;
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    #romaji {
+        color: gray;
+        margin-bottom: 20px;
+    }
+    textarea {
+        width: 80%;
+        height: 100px;
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .correct {
+        color: green;
+    }
+    .wrong {
+        color: red;
+    }
+    button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<h1>ฝึกพิมพ์ภาษาญี่ปุ่น</h1>
+
+<div id="textDisplay"></div>
+<div id="romaji"></div>
+
+<textarea id="inputBox" placeholder="พิมพ์ที่นี่..."></textarea>
+<br>
+<button onclick="newText()">สุ่มคำใหม่</button>
+
+<script>
+const words = [
+    {jp: "こんにちは", romaji: "konnichiwa"},
+    {jp: "ありがとう", romaji: "arigatou"},
+    {jp: "さくら", romaji: "sakura"},
+    {jp: "ねこ", romaji: "neko"},
+    {jp: "いぬ", romaji: "inu"},
+    {jp: "たべる", romaji: "taberu"},
+    {jp: "みず", romaji: "mizu"},
+    {jp: "やま", romaji: "yama"}
+];
+
+let current = "";
+
+function newText() {
+    const random = words[Math.floor(Math.random() * words.length)];
+    current = random.jp;
+
+    document.getElementById("textDisplay").innerHTML = random.jp;
+    document.getElementById("romaji").innerHTML = random.romaji;
+    document.getElementById("inputBox").value = "";
+}
+
+document.getElementById("inputBox").addEventListener("input", function() {
+    const input = this.value;
+    const display = document.getElementById("textDisplay");
+
+    let result = "";
+    for (let i = 0; i < current.length; i++) {
+        if (input[i] === current[i]) {
+            result += "<span class='correct'>" + current[i] + "</span>";
+        } else if (input[i]) {
+            result += "<span class='wrong'>" + current[i] + "</span>";
+        } else {
+            result += current[i];
+        }
+    }
+    display.innerHTML = result;
+});
+
+newText();
+</script>
+
+</body>
+</html>
