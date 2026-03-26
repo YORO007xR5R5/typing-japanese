@@ -2,8 +2,7 @@ body {
     font-family: sans-serif;
     /* ------------------------------------------- */
     backdrop-filter: blur(3px);
-    /* background-image:linear-gradient(rgba(0, 0, 0, 0.620), rgba(0, 0, 0, 0.620)), url(/img/anime1.jpg); */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.620)), url(/img/gif.gif);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.620)), url('./img/gif.gif');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
