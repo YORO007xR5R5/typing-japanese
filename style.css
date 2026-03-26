@@ -13,7 +13,7 @@ body {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 60px;
 }
 
 select {
@@ -41,7 +41,7 @@ select {
 
 /* text */
 #textDisplay {
-    font-size: 28px;
+    font-size: 30px;
     background: #2c2c3e;
     padding: 15px;
     border-radius: 10px;
@@ -55,7 +55,7 @@ select {
 }
 
 #meaning {
-    font-size: 16px;
+    font-size: 18px;
     color: #66d9ef;
     margin-bottom: 10px;
 }
