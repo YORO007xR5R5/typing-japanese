@@ -1,3 +1,13 @@
+const textDisplay=document.getElementById("textDisplay");
+const romaji=document.getElementById("romaji");
+const meaning=document.getElementById("meaning");
+const inputBox=document.getElementById("inputBox");
+const accuracy=document.getElementById("accuracy");
+const wpm=document.getElementById("wpm");
+const timeEl=document.getElementById("time");
+const scoreEl=document.getElementById("score");
+
+
 const categories = {
 greetings:[
 {jp:"こんにちは",romaji:"konnichiwa",th:"สวัสดี"},
@@ -122,13 +132,6 @@ if(this.value===current){nextWord();}
 categorySelect.addEventListener("change",nextWord);
 
 // refs
-const textDisplay=document.getElementById("textDisplay");
-const romaji=document.getElementById("romaji");
-const meaning=document.getElementById("meaning");
-const inputBox=document.getElementById("inputBox");
-const accuracy=document.getElementById("accuracy");
-const wpm=document.getElementById("wpm");
-const timeEl=document.getElementById("time");
-const scoreEl=document.getElementById("score");
+
 
 nextWord();
