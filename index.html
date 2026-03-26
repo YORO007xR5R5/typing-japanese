@@ -3,78 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Japanese Typing Pro</title>
-
-<style>
-body {
-    font-family: sans-serif;
-    background: #1e1e2f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.container {
-    max-width: 800px;
-    margin: auto;
-}
-
-.stats {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background: #2c2c3e;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.stat {
-    flex: 1;
-    min-width: 100px;
-}
-
-#textDisplay {
-    font-size: 32px;
-    background: #2c2c3e;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-#romaji {
-    color: #aaa;
-}
-
-#meaning {
-    color: #66d9ef;
-    margin-bottom: 10px;
-}
-
-textarea {
-    width: 100%;
-    height: 120px;
-    font-size: 20px;
-    border-radius: 10px;
-    padding: 10px;
-    border: none;
-}
-
-.correct { color: #00ff88; }
-.wrong { color: #ff4d4d; }
-
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-@media (max-width: 600px) {
-    #textDisplay { font-size: 24px; }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -96,86 +25,8 @@ button {
 
 <textarea id="inputBox" placeholder="พิมพ์ที่นี่..."></textarea>
 
-<br>
-<button onclick="nextWord()">Next</button>
-
 </div>
 
-<script>
-const words = [
-{jp:"こんにちは", romaji:"konnichiwa", th:"สวัสดี"},
-{jp:"ありがとう", romaji:"arigatou", th:"ขอบคุณ"},
-{jp:"さくら", romaji:"sakura", th:"ซากุระ"},
-{jp:"ねこ", romaji:"neko", th:"แมว"},
-{jp:"いぬ", romaji:"inu", th:"หมา"},
-{jp:"みず", romaji:"mizu", th:"น้ำ"},
-{jp:"やま", romaji:"yama", th:"ภูเขา"}
-];
-
-let current = "";
-let startTime = null;
-let totalTyped = 0;
-let totalCorrect = 0;
-let score = 0;
-
-function nextWord() {
-    const rand = words[Math.floor(Math.random()*words.length)];
-    current = rand.jp;
-
-    document.getElementById("textDisplay").innerText = rand.jp;
-    document.getElementById("romaji").innerText = rand.romaji;
-    document.getElementById("meaning").innerText = rand.th;
-
-    document.getElementById("inputBox").value = "";
-
-    startTime = new Date();
-}
-
-document.getElementById("inputBox").addEventListener("input", function() {
-    const input = this.value;
-    const display = document.getElementById("textDisplay");
-
-    let result = "";
-    let correctCount = 0;
-
-    for (let i=0;i<current.length;i++) {
-        if (input[i] === current[i]) {
-            result += "<span class='correct'>" + current[i] + "</span>";
-            correctCount++;
-        } else if (input[i]) {
-            result += "<span class='wrong'>" + current[i] + "</span>";
-        } else {
-            result += current[i];
-        }
-    }
-
-    display.innerHTML = result;
-
-    totalTyped += input.length;
-    totalCorrect += correctCount;
-
-    // Accuracy
-    let acc = totalTyped ? Math.floor((totalCorrect/totalTyped)*100) : 100;
-    document.getElementById("accuracy").innerText = acc + "%";
-
-    // WPM
-    if (startTime) {
-        let time = (new Date() - startTime)/1000;
-        document.getElementById("time").innerText = Math.floor(time);
-
-        let wpm = Math.floor((input.length/5)/(time/60));
-        document.getElementById("wpm").innerText = wpm || 0;
-    }
-
-    // Score
-    if (input === current) {
-        score += 10;
-        document.getElementById("score").innerText = score;
-    }
-});
-
-nextWord();
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
