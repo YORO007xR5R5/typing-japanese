@@ -62,7 +62,7 @@ select {
 /* text */
 #textDisplay {
     font-size:clamp(14px, 2vw, 24px);
-    font-weight: bolder;
+    
     background: #00000093;
     padding: 15px;
     border-radius: 10px;
@@ -73,7 +73,7 @@ select {
 
 #romaji {
     font-size: 18px;
-    font-weight: bolder;
+    
     color: #ffffff;
     margin-bottom: 20px;
       background: #00000093;
@@ -86,7 +86,7 @@ select {
 
 #meaning {
     font-size: 24px;
-    font-weight: bolder;
+    
     color: #ffffff;
     margin-bottom: 20px;
       background: #00000093;
