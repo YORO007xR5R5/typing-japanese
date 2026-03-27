@@ -34,7 +34,7 @@ select {
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: clamp(18px, 2vw, 20px);
 }
 
 /* stats */
@@ -49,7 +49,7 @@ select {
 }
 
 .stat {
-    font-size: 14px;
+    font-size: clamp(14px, 2vw, 20px);
 }
 
 /* text */
