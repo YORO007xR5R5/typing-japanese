@@ -3,7 +3,7 @@ body {
     /* ------------------------------------------- */
     backdrop-filter: blur(3px);
     
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./img/takan.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.600), rgba(0, 0, 0, 0.1)), url(./img/takan.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -70,13 +70,23 @@ select {
     font-weight: bolder;
     color: #ffffff;
     margin-bottom: 20px;
+      background: #00000093;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    word-break: break-word;
+    margin-bottom: 20px;
 
 }
 
 #meaning {
     font-size: 24px;
     font-weight: bolder;
-    color: #ffc400;
+    color: #ffffff;
+    margin-bottom: 20px;
+      background: #00000093;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    word-break: break-word;
     margin-bottom: 20px;
 }
 
