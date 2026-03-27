@@ -2,7 +2,8 @@ body {
     font-family: sans-serif;
     /* ------------------------------------------- */
     backdrop-filter: blur(3px);
-    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('img/gif.gif');
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/img/takan.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,7 +26,7 @@ body {
 }
 
 h2 {
-    font-size:24px;
+    font-size: 40px;
     font-weight: bolder;
 }
 
@@ -34,7 +35,7 @@ select {
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    font-size: clamp(18px, 2vw, 20px);
+    font-size: 16px;
 }
 
 /* stats */
@@ -49,12 +50,12 @@ select {
 }
 
 .stat {
-    font-size: clamp(14px, 2vw, 20px);
+    font-size: 14px;
 }
 
 /* text */
 #textDisplay {
-    font-size: clamp(18px, 2vw, 30px);
+    font-size:clamp(14px, 2vw, 24px);
     font-weight: bolder;
     background: #00000093;
     padding: 15px;
@@ -73,7 +74,7 @@ select {
 }
 
 #meaning {
-    font-size: clamp(18px, 2vw, 24px);
+    font-size: 24px;
     font-weight: bolder;
     color: #ffc400;
     margin-bottom: 20px;
@@ -108,6 +109,6 @@ textarea {
     }
 
     #textDisplay {
-        font-size: 24px;
+        font-size: 32px;
     }
 }
