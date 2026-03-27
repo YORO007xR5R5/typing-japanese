@@ -3,7 +3,7 @@ body {
     /* ------------------------------------------- */
     backdrop-filter: blur(3px);
     
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./img/takan.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/img/takan.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
