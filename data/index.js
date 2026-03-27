@@ -12,5 +12,5 @@ export const categories = {
   animals,
   colors,
   numbers,
-  hiraganaAIUEO,
+  hiraganaAIUEO
 };
