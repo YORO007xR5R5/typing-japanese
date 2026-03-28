@@ -23,7 +23,7 @@ function speakJapaneseOnly(text) {
     const jpText = text.match(/[\u3040-\u30FF\u4E00-\u9FFF]+/g);
     if (!jpText) return;
 
-    // reset sound
+    // 👇 สำคัญมากสำหรับ Safari
     speechSynthesis.cancel();
 
     const utterance = new SpeechSynthesisUtterance(jpText.join(" "));
@@ -33,8 +33,10 @@ function speakJapaneseOnly(text) {
     speechSynthesis.speak(utterance);
 }
 
-document.querySelector(".sound-btn")
-    .addEventListener("click", repeatSound);
+document.body.addEventListener("click", function initAudio() {
+    speechSynthesis.speak(new SpeechSynthesisUtterance(" "));
+    document.body.removeEventListener("click", initAudio);
+});
 
 function getRandomWord() {
     const selected = categorySelect.value;
@@ -66,9 +68,8 @@ function nextWord(playSound = false) {
 
 const soundBtn = document.querySelector(".sound-btn");
 
-soundBtn.addEventListener("click", function (e) {
-    e.stopPropagation(); // กันคลิกทะลุ
-    repeatSound();
+soundBtn.addEventListener("click", function () {
+    speakJapaneseOnly(current);
 });
 
 
