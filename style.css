@@ -1,15 +1,14 @@
 .zen-old-mincho-regular {
-  font-family: "Zen Old Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Zen Old Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
     font-family: sans-serif;
     /* ------------------------------------------- */
     backdrop-filter: blur(3px);
-    
-    background-image: linear-gradient(rgba(0, 0, 0, 0.600), rgba(0, 0, 0, 0.1)), url(./img/takan.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.600), rgba(0, 0, 0, 0.1)), url(/img/takan.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,9 +40,45 @@ select {
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
+/* --------------------sound--------------------------- */
+
+.word-box {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin: 10px 0;
+}
+
+.sound-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+
+.sound-btn:active {
+    transform: translateY(-50%) scale(0.1);
+}
+
+
+.sound-btn {
+    transition: transform 0.1s ease;
+}
+
+.sound-btn:active {
+    transform: scale(0.85);
+}
+
+/* ----------------------------------------------- */
 /* stats */
 .stats {
     display: grid;
@@ -56,14 +91,13 @@ select {
 }
 
 .stat {
-    font-size: 14px;
+    font-size: 10px;
 }
 
 /* text */
 #textDisplay {
-    font-size:clamp(14px, 2vw, 24px);
-    
-    background: #00000093;
+    /* font-size:clamp(14px, 2vw, 30px); */
+    font-size: 30px;
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 8px;
@@ -73,10 +107,9 @@ select {
 
 #romaji {
     font-size: 18px;
-    
     color: #ffffff;
     margin-bottom: 20px;
-      background: #00000093;
+    background: #00000093;
     border-radius: 10px;
     margin-bottom: 8px;
     word-break: break-word;
@@ -86,10 +119,9 @@ select {
 
 #meaning {
     font-size: 24px;
-    
     color: #ffffff;
     margin-bottom: 20px;
-      background: #00000093;
+    background: #00000093;
     border-radius: 10px;
     margin-bottom: 8px;
     word-break: break-word;

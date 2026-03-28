@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japanese Typing (Test)</title>
+    <title>Japanese Typing</title>
     <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <div class="container">
 
-        <h2>Japanese Typing (Test)</h2>
+        <h2>Japanese Typing</h2>
 
         <select id="category"></select>
 
@@ -26,16 +27,21 @@
             <div class="stat">Time: <span id="time">0</span>s</div>
         </div>
 
-        <div id="textDisplay"></div>
+        <div class="word-box">
+            <div id="textDisplay"></div>
+            <button class="sound-btn">🔊</button>
+        </div>
         <div id="romaji"></div>
         <div id="meaning"></div>
 
-        <textarea id="inputBox" placeholder="พิมพ์ที่นี่..."></textarea>
-        <script type="module" src="script.js"></script>
+        <textarea id="inputBox" placeholder="พิมพ์ที่นี่..." autofocus></textarea>
+
+
+
     </div>
 
+    <script type="module" src="script.js"></script>
 
-    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
